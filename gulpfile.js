@@ -3,11 +3,12 @@ const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
+const pug = require('gulp-pug'); // Імпортуйте gulp-pug
 
 // Шлях до файлів
 const paths = {
     scss: './src/scss/**/*.scss',
-    html: './src/*.html',
+    pug: './src/**/*.pug', // Додайте шлях до Pug файлів
     js: './src/js/**/*.js', // Додайте шлях до JavaScript файлів
     dest: './dist/'
 };
@@ -20,9 +21,10 @@ function styles() {
         .pipe(browserSync.stream());
 }
 
-// Завдання для копіювання HTML
-function html() {
-    return gulp.src(paths.html)
+// Завдання для компіляції Pug у HTML
+function templates() {
+    return gulp.src(paths.pug)
+        .pipe(pug()) // Компіляція Pug у HTML
         .pipe(gulp.dest(paths.dest))
         .pipe(browserSync.stream());
 }
@@ -44,15 +46,15 @@ function watch() {
         }
     });
     gulp.watch(paths.scss, styles);
-    gulp.watch(paths.html, html);
+    gulp.watch(paths.pug, templates); // Додайте спостереження за Pug файлами
     gulp.watch(paths.js, scripts); // Додайте спостереження за JavaScript файлами
 }
 
 // Експортування завдань
 exports.styles = styles;
-exports.html = html;
+exports.templates = templates; // Експортуйте завдання для Pug
 exports.scripts = scripts; // Експортуйте завдання для JavaScript
 exports.watch = watch;
 
 // Завдання за замовчуванням
-exports.default = gulp.series(gulp.parallel(styles, html, scripts), watch);
+exports.default = gulp.series(gulp.parallel(styles, templates, scripts), watch);

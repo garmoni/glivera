@@ -1,110 +1,76 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customers project</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <section class="customers">
-        <div class="container">
-            <div class="customers__wrapper">
-                <aside class="customers__sidebar">
-                    <div class="customers__logo">
-                        <img src="img/logo.png" alt="logo">
-                        <h2 class="customers__title">Dashboard</h2>
-                        <p class="customers__version">v.01</p>
-                    </div>
-                    <nav class="customers__navigation">
-                        <p class="customers__navigation-title">Dashboard</p>
-                        <ul class="customers__menu-list">
-                            <li class="customers__menu-item" data-type="product">Product</li>
-                            <li class="customers__menu-item customers__menu-item--active" data-type="customers">Customers</li>
-                            <li class="customers__menu-item" data-type="income">Income</li>
-                            <li class="customers__menu-item" data-type="promote">Promote</li>
-                            <li class="customers__menu-item" data-type="help">Help</li>
-                        </ul>
-                    </nav>
-                    <div class="customers__manager">
-                        <img src="img/photo.png" alt="photo">
-                        <div class="customers__manager-wrapper">
-                            <p class="customers__manager-name">Evano</p>
-                            <p class="customers__manager-position">Project Manager</p>
-                        </div>
-                    </div>
-                    <div class="customers__menu-btn">
-                        <div class="menu-btn__burger"></div>
-                    </div>
-                </aside>
-            
-                <div class="customers__content customers__content--active">
-                    <h3 class="customers__section-title">Hello Evano 👋🏼,</h3>
-                    <section class="customers__content-wrapper">
-                        <div class="customers__content-header">
-                            <div>
-                                <h3 class="customers__content-title"><a href="" class="customers__content-link">All Customers</a></h3>
-                                <a href="" class="customers__content-filter">Active Members</a>
-                            </div>
-                            <span class="customers__search">
-                                <button class="customers__search-btn"></button>
-                                <input class="customers__search-input" placeholder="Search" />
-                            </span>
-                        </div>
-                        <div class="customers__table-wrapper">
-                            <div class="customers-table">
-                                <div class="customers-table__header">
-                                    <div class="customers-table__row">
-                                        <div class="customers-table__cell customers-table__cell-heder">Customer Name</div>
-                                        <div class="customers-table__cell customers-table__cell-heder">Company</div>
-                                        <div class="customers-table__cell customers-table__cell-heder">Phone Number</div>
-                                        <div class="customers-table__cell customers-table__cell-heder">Email</div>
-                                        <div class="customers-table__cell customers-table__cell-heder">Country</div>
-                                        <div class="customers-table__cell customers-table__cell-heder">Status</div>
-                                    </div>
-                                </div>
-                                <div class="customers-table__body" id="customers-table-body">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="customers__pagination">
-                            <p class="customers__pagination-text">Showing data 1 to 8 of  256K entries</p>
-                            <ul class="customers__pagination-list">
-                                <li class="customers__pagination-item">
-                                    <a href="" class="customers__pagination-link"></a>
-                                </li>
-                                <li class="customers__pagination-item customers__pagination-item--active">
-                                    <a href="" class="customers__pagination-link">1</a>
-                                </li>
-                                <li class="customers__pagination-item">
-                                    <a href="" class="customers__pagination-link">2</a>
-                                </li>
-                                <li class="customers__pagination-item">
-                                    <a href="" class="customers__pagination-link">3</a>
-                                </li>
-                                <li class="customers__pagination-item">
-                                    <a href="" class="customers__pagination-link">4</a>
-                                </li>
-                                <li class="customers__pagination-item">
-                                    <a href="" class="customers__pagination-link">...</a>
-                                </li>
-                                <li class="customers__pagination-item">
-                                    <a href="" class="customers__pagination-link">40</a>
-                                </li>
-                                <li class="customers__pagination-item">
-                                    <a href="" class="customers__pagination-link"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </section>
-     <script src="js/script.min.js"></script>
-</body>
-</html>
+doctype html
+html(lang="uk")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Customers project
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
+        link(rel="stylesheet", href="css/style.css")
+    body
+        section.customers
+            .container
+                .customers__wrapper
+                    aside.customers__sidebar
+                        .customers__logo
+                            img(src="img/logo.png", alt="logo")
+                            h2.customers__title Dashboard
+                            p.customers__version v.01
+                        nav.customers__navigation
+                            p.customers__navigation-title Dashboard
+                            ul.customers__menu-list
+                                li.customers__menu-item(data-type="product") Product
+                                li.customers__menu-item.customers__menu-item--active(data-type="customers") Customers
+                                li.customers__menu-item(data-type="income") Income
+                                li.customers__menu-item(data-type="promote") Promote
+                                li.customers__menu-item(data-type="help") Help
+                        .customers__manager
+                            img(src="img/photo.png", alt="photo")
+                            .customers__manager-wrapper
+                                p.customers__manager-name Evano
+                                p.customers__manager-position Project Manager
+                        .customers__menu-btn
+                            .menu-btn__burger
+                    .customers__content.customers__content--active
+                        h3.customers__section-title Hello Evano 👋🏼,
+                        section.customers__content-wrapper
+                            .customers__content-header
+                                div
+                                    h3.customers__content-title
+                                        a.customers__content-link(href="") All Customers
+                                    a.customers__content-filter(href="") Active Members
+                                span.customers__search
+                                    button.customers__search-btn
+                                    input.customers__search-input(placeholder="Search")
+                            .customers__table-wrapper
+                                .customers-table
+                                    .customers-table__header
+                                        .customers-table__row
+                                            .customers-table__cell.customers-table__cell-heder Customer Name
+                                            .customers-table__cell.customers-table__cell-heder Company
+                                            .customers-table__cell.customers-table__cell-heder Phone Number
+                                            .customers-table__cell.customers-table__cell-heder Email
+                                            .customers-table__cell.customers-table__cell-heder Country
+                                            .customers-table__cell.customers-table__cell-heder Status
+                                    .customers-table__body#customers-table-body
+                            .customers__pagination
+                                p.customers__pagination-text Showing data 1 to 8 of 256K entries
+                                ul.customers__pagination-list
+                                    li.customers__pagination-item
+                                        a.customers__pagination-link(href="")
+                                    li.customers__pagination-item.customers__pagination-item--active
+                                        a.customers__pagination-link(href="") 1
+                                    li.customers__pagination-item
+                                        a.customers__pagination-link(href="") 2
+                                    li.customers__pagination-item
+                                        a.customers__pagination-link(href="") 3
+                                    li.customers__pagination-item
+                                        a.customers__pagination-link(href="") 4
+                                    li.customers__pagination-item
+                                        a.customers__pagination-link(href="") ...
+                                    li.customers__pagination-item
+                                        a.customers__pagination-link(href="") 40
+                                    li.customers__pagination-item
+                                        a.customers__pagination-link(href="")
+                        script(src="js/script.min.js")
